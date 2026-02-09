@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chaewon</title>
+
+    <style>
+        /* --- 基本排版 --- */
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0 20px;
+            background: linear-gradient(to bottom, #ffe6f0, #fff0e6);
+            color: #333;
+            transition: background 0.5s;
+        }
+
+        /* --- 標題 --- */
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin: 40px 0;
+            background: linear-gradient(90deg, #ff6b81, #ffb347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #ff6b81; /* fallback */
+        }
+
+        /* --- 導覽列 --- */
+        nav {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            padding: 12px 0;
+            border-bottom: 2px solid #ff6b81;
+            text-align: center;
+            z-index: 10;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: background 0.3s;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #ff6b81;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+            background: #ff6b81;
+            transform: scale(1.1);
+        }
+
+        /* --- 區塊 --- */
+        section {
+            margin: 80px auto;
+            max-width: 800px;
+        }
+
+        /* --- 卡片 --- */
+        .card {
+            border-radius: 20px;
+            padding: 30px;
+            background: linear-gradient(to bottom right, #fff, #ffe6f0);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+        }
+
+        /* --- 圖片 --- */
+        img {
+            margin-top: 20px;
+            border-radius: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        img:hover {
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 10px 20px rgba(255,107,129,0.4);
+        }
+
+        /* --- 影片 --- */
+        iframe {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 16px;
+        }
+
+        /* --- 小團體連結 --- */
+        ul li a {
+            color: #ff6b81;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        ul li a:hover {
+            color: #ffb347;
+        }
+
+        /* --- 生日計算區 --- */
+        .date-box {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        button {
+            margin-left: 10px;
+            padding: 8px 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #ff6b81, #ffb347);
+            color: #fff;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #ffb347, #ff6b81);
+            transform: scale(1.05);
+        }
+
+        /* --- 響應式 --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 36px; }
+            nav a { margin: 0 10px; padding: 4px 8px; }
+        }
+        /* --- 甜甜圈 & 泡麵圖片統一比例 --- */
+.donut-images, .ramen-images {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px; /* 圖片間距 */
+    margin-top: 10px;
+}
+
+.donut-images img, .ramen-images img {
+    width: 32%;            /* 桌面版每行三張 */
+    aspect-ratio: 1 / 1;   /* 固定正方形比例 */
+    object-fit: cover;     /* 填滿框框，保持比例裁切 */
+    border-radius: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.donut-images img:hover, .ramen-images img:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 10px 20px rgba(255,107,129,0.4);
+}
+
+/* 響應式：手機版自適應 */
+@media (max-width: 600px) {
+    .donut-images img, .ramen-images img {
+        width: 100%;
+    }
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <h1>This is an introduce of Kim Chaewon</h1>
+
+    <!-- 導覽列 -->
+    <nav>
+        <a href="#izone">IZ*ONE 時期</a>
+        <a href="#le_sserafim">LE SSERAFIM 時期</a>
+        <a href="#donut">甜甜圈時光 </a>
+        <a href="#ramen">泡麵時光 </a>
+    </nav>
+
+    <!-- 小團體 -->
+    <section>
+        <h3>采寶小團體</h3>
+        <ul>
+            <li>
+                <a href="https://zh.wikipedia.org/zh-tw/IZ*ONE" target="_blank">IZ*ONE</a>
+            </li>
+            <li>
+                <a href="https://zh.wikipedia.org/zh-tw/LE_SSERAFIM" target="_blank">LE SSERAFIM</a>
+            </li>
+        </ul>
+    </section>
+
+    
+    <!-- IZ*ONE -->
+<section id="izone">
+    <div class="card">
+        <h2>IZ*ONE</h2>
+        <p>采寶在 IZ*ONE 的時候是我寶寶</p>
+        <p>2018年10月29日，以限定女子團體 IZ*ONE 成員正式出道。</p>
+        <p>2021年4月29日，IZ*ONE 正式解散。</p>
+
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/89sl9rx9qNE"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<!-- LE SSERAFIM -->
+<section id="le_sserafim">
+    <div class="card">
+        <h2>LE SSERAFIM</h2>
+        <p>采寶在拉皮的時候也還是我寶寶</p>
+        <p>2022年3月14日，與 SOURCE MUSIC 簽訂專屬合約。</p>
+        <p>2022年4月7日，正式成為 LE SSERAFIM 成員並擔任隊長。</p>
+
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/CnNJtnoSU5U"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<!-- 甜甜圈照片區 -->
+<section id="donut">
+    <div class="card">
+        <h3>金采源的甜甜圈時光</h3>
+        <div class="donut-images">
+            <img src="donut1.jpg" alt="chaewon eating donut 1">
+            <img src="donut2.jpg" alt="chaewon eating donut 2">
+            <img src="donut3.jpg" alt="chaewon eating donut 3">
+        </div>
+    </div>
+</section>
+
+
+<!-- 吃泡麵照片區 -->
+<section id="ramen">
+    <div class="card">
+        <h3>金采源的泡麵時光 </h3>
+        <div class="ramen-images">
+            <img src="ramen1.jpg" alt="chaewon eating ramen 1">
+            <img src="ramen2.jpg" alt="chaewon eating ramen 2">
+            <img src="ramen3.jpg" alt="chaewon eating ramen 3">
+            <img src="ramen4.jpg" alt="chaewon eating ramen 4">
+            <img src="ramen5.jpg" alt="chaewon eating ramen 5">
+            <img src="ramen6.jpg" alt="chaewon eating ramen 6">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- 生日計算 -->
+    <section class="date-box">
+        <h3>和金采源差多少</h3>
+        <p>金采源生日：2000 / 9 / 5</p>
+
+        <input type="date" id="birthday">
+        <button onclick="compareBirthday()">計算</button>
+
+        <p id="result"></p>
+    </section>
+
+    <script>
+        function compareBirthday() {
+            const userDateValue = document.getElementById("birthday").value;
+
+            if (!userDateValue) {
+                document.getElementById("result").innerText = "請先選擇你的生日！";
+                return;
+            }
+
+            const chaewonBirthday = new Date(2000, 8, 5);
+            const userBirthday = new Date(userDateValue);
+
+            const oneDay = 1000 * 60 * 60 * 24;
+            const diffDays = Math.floor(
+                (userBirthday - chaewonBirthday) / oneDay
+            );
+
+            let message = "";
+
+            if (diffDays > 0) {
+                message = `你比金采源小 ${diffDays} 天 但她還是我寶寶`;
+            } else if (diffDays < 0) {
+                message = `你比金采源大 ${Math.abs(diffDays)} 天 但她還是我寶寶`;
+            } else {
+                message = "你和金采源是同一天出生的！！ 但她還是我寶寶";
+            }
+
+            document.getElementById("result").innerText = message;
+        }
+    </script>
+
+</body>
+</html>
